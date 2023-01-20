@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: Raleway;
+  src: url(assets/fonts/Raleway-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: RalewayBold;
+  src: url(assets/fonts/Raleway-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: RalewayExtraBold;
+  src: url(assets/fonts/Raleway-ExtraBold.ttf) format("truetype");
+}
+* {
+  font-family: Raleway;
+}
+@keyframes fadeInBottomToTop {
+  0% {
+    -webkit-transform: translateY(200px) scale(0.7);
+    opacity: 0;
+    transform: translateY(200px) scale(0.7);
+  }
+  100% {
+    -webkit-transform: translateY(0) scale(1);
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.fadeInBottomToTop {
+  opacity:0;
+  animation: fadeInBottomToTop cubic-bezier(0.6, 0.2, 0.1, 1) 700ms forwards ;
+}
+app-input{
+  display: contents;
+}

@@ -1,0 +1,16 @@
+<div class="relative w-full mt-2">
+  <input
+    type="text"
+    id="voice-search"
+    class="border border-gray-200 placeholder:font-bold  text-gray-900 text-xs focus:ring-accent focus:border-accent block w-full h-full pl-5 p-4"
+    [placeholder]="placeholder"
+    [class]="class"
+    required=""
+  />
+  <button
+    type="button"
+    class="flex absolute inset-y-0 right-0 items-center pr-3"
+  >
+   <ng-content></ng-content>
+  </button>
+</div>

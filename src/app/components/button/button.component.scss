@@ -1,0 +1,16 @@
+
+@mixin hover-active() {
+    &:hover,
+    &:active {
+      @content;
+    }
+  }
+
+.button {
+  background-image: linear-gradient(to right, #ff4000, #ff0099, #ff4000);
+  background-size: 300% 100%;
+  transition: all 0.5s ease-in-out;
+  @include hover-active() {
+    background-position: -50% 0;
+  }
+}

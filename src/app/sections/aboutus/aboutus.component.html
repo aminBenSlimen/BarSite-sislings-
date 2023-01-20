@@ -1,0 +1,54 @@
+<div
+  class="h-full flex flex-col gap-4 items-center justify-center bg-black text-white py-24"
+>
+  <app-sections-headers
+    [title]="'About Our Club'"
+    [description]=""
+  ></app-sections-headers>
+
+  <div class="flex gap-12 pt-16 max-w-6xl">
+    <div class="w-1/2 relative">
+      <img src="assets/images/dj1.jpg" class="absolute right-0 h-full" alt="" />
+      <img
+        src="assets/images/dj4.jpg"
+        class="shadow-lg absolute z-10 bottom-1/3 -left-10 h-1/2"
+        alt=""
+      />
+      <img
+        src="assets/images/dj3.jpg"
+        class="shadow-lg absolute z-10 -bottom-20 left-[40%] h-[40%]"
+        alt=""
+      />
+      <img
+        src="assets/images/dj2.jpg"
+        class="shadow-lg absolute z-10 -bottom-[5.5rem] -left-28 w-[55%]"
+        alt=""
+      />
+    </div>
+    <div class="flex flex-col gap-4 w-1/2">
+      <h1
+        class="text-2xl font-[RalewayBold] text-white !animation-delay-[150ms]"
+      >
+        The story behind OnClub
+      </h1>
+      <p class="text-gray-100">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id excepturi
+        aliquam natus perspiciatis necessitatibus eum alias quo rem repudiandae
+        labore itaque, consectetur, eligendi magnam facere veritatis tenetur
+        exercitationem quas ad. Numquam cumque quod ipsum corporis tempore quasi
+        atque sequi aliquid maiores, impedit error aliquam, provident iusto odit
+        nisi asperiores dicta.
+      </p>
+      <p class="text-gray-100">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad voluptatum
+        minus, nesciunt animi aperiam eveniet, consequuntur molestiae odio
+        corporis eaque assumenda dolor sed. Dolorum sequi aliquam vero eos illum
+        repellat praesentium odit, omnis, rerum aspernatur corrupti numquam sed
+        culpa temporibus iure perspiciatis molestiae quos in eius voluptas?
+        Totam similique quo modi possimus, quisquam minus doloribus consequatur
+        nisi, corporis sunt sit tenetur earum?
+      </p>
+      <app-button [type]="'left'" [content]="'READ MORE'"></app-button>
+    </div>
+  </div>
+</div>
