@@ -20,7 +20,9 @@ import { FooterComponent } from './sections/footer/footer.component';
 import { InputComponent } from './components/input/input.component';
 import { AdditionalserviceComponent } from './sections/additionalservice/additionalservice.component';
 import { DjsectionComponent } from './sections/djsection/djsection.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {CarouselModule} from 'primeng/carousel';
+import {CalendarModule} from 'primeng/calendar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +46,10 @@ import { DjsectionComponent } from './sections/djsection/djsection.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CarouselModule,
+    BrowserAnimationsModule,
+    CalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,15 +14,15 @@ export class NavbarComponent {
   mobileNavopen = false;
   path = '/';
   paths = [
-    'About Us',
-    'Upcoming events',
-    'The Menu',
     'VIP',
-    'Our Cocktails',
-    'Gallery',
-    'Booking',
+    'Upcoming events',
+    'About Us',
     'Additional Services',
-    'Dj Section',
+    'Gallery',
+    'The Menu',
+    'Our Cocktails',
+    'Booking',
+    // 'Dj Section',
     'Contact Us',
   ];
 

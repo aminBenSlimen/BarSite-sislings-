@@ -1,0 +1,40 @@
+@supports (-webkit-text-stroke: 2px black) {
+  h1.stroke {
+    -webkit-text-stroke: 2px white;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .leftImage {
+    width: 300px !important;
+    left: -12% !important;
+    bottom: -50px !important;
+  }
+  .rightImage {
+    width: 250px !important;
+    right: -2% !important;
+    bottom: -99px !important;
+  }
+}
+.rightImage {
+  right: 10%;
+  bottom: -49px;
+  width: 434px;
+  transform: rotateZ(-347deg);
+}
+
+.leftImage {
+  left: 12%;
+  top: -80px;
+
+  width: 434px;
+
+  transform: rotateZ(348deg);
+}
+canvas {
+  display: block;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+}

@@ -1,4 +1,4 @@
-<div class="antialiased fixed w-full z-30 duration-500">
+<div class=" fixed w-screen z-30 duration-500">
 
   <nav
     class="w-full text-gray-700 bg-black border-b border-accent "
@@ -12,7 +12,7 @@
       >
         <img src="assets/images/famm.png" class="h-14 mr-8" alt="" />
         <button
-          class="rounded-lg md:hidden focus:outline-none focus:shadow-outline text-black"
+          class="rounded-lg md:hidden focus:outline-none focus:shadow-outline text-white"
           (click)="mobileNavopen = !mobileNavopen"
         >
           <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -33,7 +33,7 @@
       </div>
       <nav
         [class]="mobileNavopen ? 'flex' : 'hidden md:flex'"
-        class="flex-grow pb-4 justify-center md:pb-0 md:justify-center md:flex-row w-full z-10"
+        class="flex-grow pb-4 justify-center md:pb-0 md:justify-center md:flex-row flex-col items-center w-full z-10"
       >
         <a
         *ngFor="let p of paths"
@@ -41,7 +41,7 @@
             path === p ? 'text-accent' : 'text-white '
           "
           (click)="changePath(p)"
-          class="px-4 cursor-pointer py-2 mt-2 text-sm duration-150 font-semibold rounded-lg md:mt-0 md:ml-4 focus:outline-none focus:shadow-outline"
+          class="px-4 cursor-pointer hoverable py-2 mt-2 text-sm duration-150 font-semibold rounded-lg md:mt-0 md:ml-4 focus:outline-none focus:shadow-outline"
           >{{p}}</a
         >
        

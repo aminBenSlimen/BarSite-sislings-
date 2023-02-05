@@ -3,7 +3,7 @@
 >
   <app-sections-headers [title]="'The Menu'"></app-sections-headers>
 
-  <div class="flex gap-8 pt-16 max-w-6xl w-full">
+  <div class="flex flex-col md:flex-row gap-8 pt-16 max-w-6xl w-full p-4 md:p-0">
     <div class="flex flex-col gap-12">
       <div class="flex gap-6 items-center">
         <img src="assets/images/opuFish.jpg" class="w-20" alt="" />
@@ -19,6 +19,7 @@
             </p>
           </div>
           <div>
+            <div class="text-accent p-1 text-sm font-bold line-through">$49.00</div>
             <div class="bg-accent text-white p-1 text-sm font-bold">$49.00</div>
           </div>
         </div>
@@ -60,7 +61,8 @@
         </div>
       </div>
     </div>
-    <div class="border-l"></div>
+    <div class="border-l hidden md:block"></div>
+    <div class="border-b md:hidden"></div>
 
     <div class="flex flex-col gap-12">
       <div class="flex gap-6 items-center">

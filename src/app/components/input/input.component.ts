@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class InputComponent {
   @Input('placeholder') placeholder:any;
   @Input('class') class:any;
+  @Input('type') type:any = 'text';
 }

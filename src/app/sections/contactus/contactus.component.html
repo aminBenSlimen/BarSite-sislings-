@@ -1,10 +1,10 @@
 <div
-  class="h-full flex flex-col gap-4 items-center justify-center bg-black text-white py-24"
+  class="h-full flex flex-col gap-4 items-center justify-center bg-black text-white p-4 md:p-0 py-24 "
 >
   <app-sections-headers [title]="'Contact Us'" description=" Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor rem amet numquam, ab similique est."></app-sections-headers>
  
-  <div class="flex flex-col gap-4 pt-16 max-w-6xl w-full">
-    <div class="flex gap-8">
+  <div class="flex flex-col gap-4 pt-16 max-w-6xl w-full ">
+    <div class="flex flex-col md:flex-row gap-8">
       <app-input placeholder="Your name" class="bg-neutral-800 !text-white border-none"> </app-input>
       <app-input placeholder="Your email" class="bg-neutral-800 !text-white border-none"> </app-input>
       <app-input placeholder="Phone" class="bg-neutral-800 !text-white border-none"> </app-input>
@@ -16,5 +16,5 @@
       ></textarea>
     </div>
   </div>
-  <app-button content="See all Menu" type="center" class="mt-4"></app-button>
+  <app-button content="Send" type="center" class="mt-4"></app-button>
 </div>
