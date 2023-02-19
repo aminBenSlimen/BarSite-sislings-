@@ -1,0 +1,189 @@
+{
+  "data": {
+    "events": [
+      {
+        "title": "Girls Night",
+        "description": "Girls night will be amazing the theme is pink .its gonna be awsome",
+        "thumbnail_url": "http://sislingsadmin.cokitana-erp.online/storage/events/xA926AmiDh1TQVDKM3ffZd0OfzE4z98Tc7YzwTS3.jpg",
+        "start_at": "2023-02-17 17:40:26",
+        "end_at": "2023-02-17 22:40:26",
+        "ticket_price": "9",
+        "ticket_price_after_discount": null,
+        "ticket_payment_url": null
+      },
+      {
+        "title": "Saturday night",
+        "description": "this is gonna be an amazing event",
+        "thumbnail_url": "http://sislingsadmin.cokitana-erp.online/storage/events/BwGgmW71j4Jsy2NZWb28xA4Y6kjeQzUwfCVSjNpo.jpg",
+        "start_at": "2023-02-18 20:36:09",
+        "end_at": "2023-02-18 22:36:09",
+        "ticket_price": "10",
+        "ticket_price_after_discount": "8",
+        "ticket_payment_url": "https://sislings.cokitana-erp.online/"
+      },
+      {
+        "title": "Jazz party",
+        "description": "Best jazz party ever with the best band in town",
+        "thumbnail_url": "http://sislingsadmin.cokitana-erp.online/storage/events/nuushePlJHweuWRXjojLxDG1PPQpiy3oTZd0GT0l.jpg",
+        "start_at": "2023-02-23 16:54:19",
+        "end_at": "2023-02-23 22:54:19",
+        "ticket_price": "15",
+        "ticket_price_after_discount": "10",
+        "ticket_payment_url": null
+      },
+      {
+        "title": "Rock & roll 2nd edition",
+        "description": "We are back again with the second editon of rock and roll with the best band  Rockstars",
+        "thumbnail_url": "http://sislingsadmin.cokitana-erp.online/storage/events/CMvZr06WRCQ41maQbwhsblUBBlscpWZzqeG04pXR.jpg",
+        "start_at": "2023-02-25 20:38:24",
+        "end_at": "2023-02-25 22:38:24",
+        "ticket_price": "10",
+        "ticket_price_after_discount": null,
+        "ticket_payment_url": null
+      }
+    ],
+    "menu": {
+      "title": "Summer menu",
+      "items": [
+        {
+          "title": "Caramel topped Ice cream",
+          "description": "Caramel, choclate, biscuit",
+          "image_url": "http://sislingsadmin.cokitana-erp.online/storage/menus/GvyKzGsEYyqZEUMyyA94rZQeIADjVRZUsDAmbeA8.jpg",
+          "price": "8",
+          "price_after_discount": "0"
+        },
+        {
+          "title": "Banana Split",
+          "description": "Banana, choclate, nuts, caramel",
+          "image_url": "http://sislingsadmin.cokitana-erp.online/storage/menus/xVRRc57DkPjpI3pXEs9ptp9xRonbrnt3N4dyjT1y.webp",
+          "price": "9",
+          "price_after_discount": "0"
+        },
+        {
+          "title": "Molted Cake",
+          "description": "Coffee, choclate, cream",
+          "image_url": "http://sislingsadmin.cokitana-erp.online/storage/menus/rYKytqFjOqQX4CiQFcX2UgTOSvny5bIPLX5hygii.jpg",
+          "price": "11",
+          "price_after_discount": "0"
+        },
+        {
+          "title": "Oreo cups",
+          "description": "Oreos, cream, vanilla ice cream",
+          "image_url": "http://sislingsadmin.cokitana-erp.online/storage/menus/AnUHV5c5ZX2JKnTWCc5D49RLHapYWnaiPQRlJiyA.jpg",
+          "price": "15",
+          "price_after_discount": "0"
+        },
+        {
+          "title": "Donuts",
+          "description": "Sweeets, choclate, vanilla cream",
+          "image_url": "http://sislingsadmin.cokitana-erp.online/storage/menus/7BbtUDr1iph5MeI3XPdaVENuuFfQTU5ys1NsGS3J.jpg",
+          "price": "9",
+          "price_after_discount": "0"
+        },
+        {
+          "title": "Rolled ice cream",
+          "description": "Ice cream, sweets, nuts (strowbery, choclate,vanilla) flavors",
+          "image_url": "http://sislingsadmin.cokitana-erp.online/storage/menus/Ikfo45P35pvFpPK4DmdrCR7916e8H9yQqvbVNgfU.png",
+          "price": "6",
+          "price_after_discount": "0"
+        }
+      ]
+    },
+    "promos": [
+      {
+        "title": "Huge discount on cocktails",
+        "description": "10% discount on almost all cocktails  and 2 free shots on each cocktail purchase",
+        "image_url": "http://sislingsadmin.cokitana-erp.online/storage/promos/bEPaHQa4DeIqh859hgKAAnC5QGe25lslcSTXMVoZ.png",
+        "use_custom_content": true
+      },
+      {
+        "title": null,
+        "description": null,
+        "image_url": "http://sislingsadmin.cokitana-erp.online/storage/promos/xYzy987rkBKVuASKkKwHCjURzCIz6Iidx8CwY6a6.jpg",
+        "use_custom_content": false
+      }
+    ],
+    "cocktails": [
+      {
+        "name": "Princess of kenya",
+        "description": "Princess of kenya will refresh you mind and soul with sweet and sour flavors",
+        "image_url": "http://sislingsadmin.cokitana-erp.online/storage/cocktails/pWxA9AEci8Y90FMPDo8uojAELZroLb1jHTS3N8YR.png"
+      },
+      {
+        "name": "A Day In Bahamas",
+        "description": "A Day In Bahamas wil lrefresh your mind and soul",
+        "image_url": "http://sislingsadmin.cokitana-erp.online/storage/cocktails/uGaqlzPxFzbruqp3ca5FOB2BpSVj0KBInegWLrLq.png"
+      },
+      {
+        "name": "Captain Ice",
+        "description": "Captain Ice will refresh your mind and soul",
+        "image_url": "http://sislingsadmin.cokitana-erp.online/storage/cocktails/QcV5IJfKummjIb6dhKmyIoAO3idYQzUw8OTJJXZf.png"
+      },
+      {
+        "name": "Lemonceli",
+        "description": "Lemonceli  will refresh your mind and soul",
+        "image_url": "http://sislingsadmin.cokitana-erp.online/storage/cocktails/tEUGZOkWlIL6lKOEKInNymneYP0dH3ajtkO6hXlF.png"
+      }
+    ],
+    "galleries": [
+      {
+        "title": "Drinks",
+        "sub_title": null,
+        "image_url": "http://sislingsadmin.cokitana-erp.online/storage/gallery/5zoM5E5RUMDOPAA7GCKiCxwRvFLbPpEJJ60NRO03.jpg",
+        "date": "2023-02-11"
+      },
+      {
+        "title": "Bar",
+        "sub_title": null,
+        "image_url": "http://sislingsadmin.cokitana-erp.online/storage/gallery/M7L6dLDf5BXlK91NRmnJMOqBgRzLfBFrcgPF8vA5.jpg",
+        "date": "2023-02-11"
+      },
+      {
+        "title": "Food",
+        "sub_title": null,
+        "image_url": "http://sislingsadmin.cokitana-erp.online/storage/gallery/6Vxw5tm17HEsDltw1nqMJhjA6KT9DyAGWn5ytCS4.jpg",
+        "date": "2023-02-11"
+      },
+      {
+        "title": "Interior",
+        "sub_title": null,
+        "image_url": "http://sislingsadmin.cokitana-erp.online/storage/gallery/2x7HbA0VySNt0uIuf28BzCorcwjQKhlOZpZvktY6.jpg",
+        "date": "2023-02-11"
+      },
+      {
+        "title": "Beers buck",
+        "sub_title": null,
+        "image_url": "http://sislingsadmin.cokitana-erp.online/storage/gallery/VJMSTf6DAZihJ5eSRfXe4anfSEUqy8x81wRJPPVJ.jpg",
+        "date": "2023-02-11"
+      },
+      {
+        "title": "Dj",
+        "sub_title": null,
+        "image_url": "http://sislingsadmin.cokitana-erp.online/storage/gallery/xQMEOnpESR5dkNReh4r20fphbcqDBmQ88vTHuBIL.jpg",
+        "date": "2023-02-11"
+      }
+    ],
+    "services": [
+      {
+        "title": "Birthday Parties",
+        "description": "Spend your birthday with us, and enjoy a night you\u2019ll remember forever.",
+        "image_url": "http://sislingsadmin.cokitana-erp.online/storage/services/1XM0NoqCRXMFNneIyHei0FnmmcWDi4numOuPVX6w.png"
+      },
+      {
+        "title": "Corporate Events",
+        "description": "A friendly happy hour, a company holiday party, or an evening of entertainment for VIP.",
+        "image_url": "http://sislingsadmin.cokitana-erp.online/storage/services/shtKqVg3iKMKphct01JScDLsnF9J6KVq3AO5NvCQ.png"
+      },
+      {
+        "title": "Lounge Area",
+        "description": "Relaxing , Chilling in a cozy lounge with the best services ever",
+        "image_url": "http://sislingsadmin.cokitana-erp.online/storage/services/4ZDHKm5b4voCjDPwXfoUarVw9dhxypP6xdephYpJ.png"
+      },
+      {
+        "title": "Branded Events",
+        "description": "VIP Night Club! End your single days in style with a VIP table reservation.",
+        "image_url": "http://sislingsadmin.cokitana-erp.online/storage/services/KJUwzxPDfzyGg9NVFN6o5HiUi0yOi8JKCk0gU2vg.png"
+      }
+    ]
+  }
+}

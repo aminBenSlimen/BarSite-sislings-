@@ -1,10 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpService } from 'src/app/services/http/http.service';
 
 @Component({
   selector: 'app-vip',
   templateUrl: './vip.component.html',
-  styleUrls: ['./vip.component.scss']
+  styleUrls: ['./vip.component.scss'],
 })
-export class VipComponent {
+export class VipComponent implements OnInit {
+  promos: any = [];
+  responsiveOptions;
+  constructor(private http: HttpService) {
+    this.responsiveOptions = [
+      {
+        breakpoint: '1024px',
+        numVisible: 3,
+        numScroll: 3,
+      },
+      {
+        breakpoint: '768px',
+        numVisible: 2,
+        numScroll: 2,
+      },
+      {
+        breakpoint: '560px',
+        numVisible: 1,
+        numScroll: 1,
+      },
+    ];
+  }
 
+  ngOnInit() {
+    this.promos = this.http.globalData.promos;
+  }
 }

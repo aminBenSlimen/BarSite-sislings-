@@ -6,55 +6,17 @@
     [description]="'we arrange many other events'"
   ></app-sections-headers>
 
-  <div class="grid md:grid-cols-3 gap-8 p-4 md:p-0 pt-16  max-w-6xl w-full">
-    <div class="relative">
+  <div class="flex flex-wrap gap-8 p-4 md:p-0 pt-16 justify-center max-w-6xl w-full">
+    <div *ngFor="let event of events" class="relative" style="flex: 0 0 30%">
         <div class="absolute text-white bg-accent bg-opacity-90 flex flex-col justify-center items-center gap-4 w-full h-full opacity-0 hover:opacity-100 cursor-pointer duration-500">
-            <span class="text-md">Club. Enjoy</span>
-            <span class="text-2xl font-[RalewayBold]">Night Party</span>
+            <span class="text-md">{{event.sub_title}}</span>
+            <span class="text-2xl font-[RalewayBold]">{{event.title}}</span>
             <hr class="w-16">
+            <span class="text-sm font-[RalewayBold]">{{event.date && toDate(event.date) | date : "mediumDate" }}</span>
         </div>
-        <img src="assets/images/dj1.jpg" class=" w-full h-full" alt="">
+        <img [src]="event.image_url || 'assets/images/dj1.jpg'" class=" w-full h-full" alt="">
     </div>
-    <div class="relative">
-        <div class="absolute text-white bg-accent bg-opacity-90 flex flex-col justify-center items-center gap-4 w-full h-full opacity-0 hover:opacity-100 cursor-pointer duration-500">
-            <span class="text-md">Club. Enjoy</span>
-            <span class="text-2xl font-[RalewayBold]">Night Party</span>
-            <hr class="w-16">
-        </div>
-        <img src="assets/images/dj1.jpg" class=" w-full h-full" alt="">
-    </div>
-    <div class="relative">
-        <div class="absolute text-white bg-accent bg-opacity-90 flex flex-col justify-center items-center gap-4 w-full h-full opacity-0 hover:opacity-100 cursor-pointer duration-500">
-            <span class="text-md">Club. Enjoy</span>
-            <span class="text-2xl font-[RalewayBold]">Night Party</span>
-            <hr class="w-16">
-        </div>
-        <img src="assets/images/dj1.jpg" class=" w-full h-full" alt="">
-    </div>
-    <div class="relative">
-        <div class="absolute text-white bg-accent bg-opacity-90 flex flex-col justify-center items-center gap-4 w-full h-full opacity-0 hover:opacity-100 cursor-pointer duration-500">
-            <span class="text-md">Club. Enjoy</span>
-            <span class="text-2xl font-[RalewayBold]">Night Party</span>
-            <hr class="w-16">
-        </div>
-        <img src="assets/images/dj1.jpg" class=" w-full h-full" alt="">
-    </div>
-    <div class="relative">
-        <div class="absolute text-white bg-accent bg-opacity-90 flex flex-col justify-center items-center gap-4 w-full h-full opacity-0 hover:opacity-100 cursor-pointer duration-500">
-            <span class="text-md">Club. Enjoy</span>
-            <span class="text-2xl font-[RalewayBold]">Night Party</span>
-            <hr class="w-16">
-        </div>
-        <img src="assets/images/dj1.jpg" class=" w-full h-full" alt="">
-    </div>
-    <div class="relative">
-        <div class="absolute text-white bg-accent bg-opacity-90 flex flex-col justify-center items-center gap-4 w-full h-full opacity-0 hover:opacity-100 cursor-pointer duration-500">
-            <span class="text-md">Club. Enjoy</span>
-            <span class="text-2xl font-[RalewayBold]">Night Party</span>
-            <hr class="w-16">
-        </div>
-        <img src="assets/images/dj1.jpg" class=" w-full h-full" alt="">
-    </div>
+  
   </div>
   <app-button content="See all " type="center" class="mt-8"></app-button>
 

@@ -1,5 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import gsap from 'gsap';
+import { HttpService } from './services/http/http.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,6 +12,9 @@ export class AppComponent implements AfterViewInit {
   smallBall;
   innerWidth;
   hoverables;
+  constructor(public http:HttpService){
+    http.getAllData()
+  }
   ngAfterViewInit() {
     this.innerWidth = window.innerWidth;
     

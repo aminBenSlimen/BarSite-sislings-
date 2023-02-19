@@ -1,13 +1,15 @@
 <app-navbar></app-navbar>
 <app-welcome></app-welcome>
-<app-vip id="VIP"></app-vip>
-<app-upcomingevents id="Upcoming events"></app-upcomingevents>
-<app-aboutus id="About Us"></app-aboutus>
-<app-additionalservice id="Additional Services"></app-additionalservice>
-<app-gallery id="Gallery"></app-gallery>
-<app-menu id="The Menu"></app-menu>
-<app-signature id="Our Cocktails"></app-signature>
-<app-booking id="Booking"></app-booking>
+<ng-container *ngIf="http.globalData">
+  <app-vip id="Promos"></app-vip>
+  <app-upcomingevents id="Upcoming events"></app-upcomingevents>
+  <app-aboutus id="About Us"></app-aboutus>
+  <app-additionalservice id="Additional Services"></app-additionalservice>
+  <app-gallery id="Gallery"></app-gallery>
+  <app-menu id="The Menu"></app-menu>
+  <app-signature id="Our Cocktails"></app-signature>
+  <app-booking id="Booking"></app-booking>
+</ng-container>
 <!-- <app-djsection id="Dj Section"></app-djsection> -->
 <app-contactus id="Contact Us"></app-contactus>
 

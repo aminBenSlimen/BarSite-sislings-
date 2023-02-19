@@ -14,7 +14,7 @@ export class NavbarComponent {
   mobileNavopen = false;
   path = '/';
   paths = [
-    'VIP',
+    'Promos',
     'Upcoming events',
     'About Us',
     'Additional Services',

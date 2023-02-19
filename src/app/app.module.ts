@@ -23,6 +23,7 @@ import { DjsectionComponent } from './sections/djsection/djsection.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {CarouselModule} from 'primeng/carousel';
 import {CalendarModule} from 'primeng/calendar';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,9 +50,10 @@ import {CalendarModule} from 'primeng/calendar';
     AppRoutingModule,
     CarouselModule,
     BrowserAnimationsModule,
-    CalendarModule
+    CalendarModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

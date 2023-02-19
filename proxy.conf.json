@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "https://sislingsadmin.cokitana-erp.online",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

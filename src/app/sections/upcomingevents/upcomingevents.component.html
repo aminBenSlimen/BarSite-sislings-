@@ -1,4 +1,5 @@
 <div
+*ngIf="events && events.length > 0"
   class="h-full flex flex-col gap-4 items-center justify-center bg-black text-white py-24"
 >
   <app-sections-headers
@@ -15,29 +16,38 @@
       [numVisible]="3"
       [numScroll]="1"
       [circular]="true"
-      [showIndicators]="true"
       class="w-full"
       [responsiveOptions]="responsiveOptions"
-      [indicatorsContentStyle]="{margin:'0.5em 0'}"
+      [indicatorsContentStyle]="{ margin: '0.5em 0' }"
     >
-     
       <ng-template let-event pTemplate="item">
-        <div class="flex flex-col gap-4 p-6 bg-zinc-900 m-2">
-          <div class="relative h-1/2">
+        <div class="flex flex-col gap-4 p-6 bg-zinc-900 m-2 h-full">
+          <div class="relative h-56">
             <img
-              src="assets/images/dj2.jpg"
+              [src]="event.thumbnail_url"
               class="h-full object-cover"
               alt=""
             />
             <div
               class="bg-accent text-white px-2 py-1 absolute left-4 -bottom-4 text-xs font-bold"
             >
-              {{event}}
+              <span
+                [class]="
+                  event.ticket_price_after_discount ? 'line-through' : ''
+                "
+                >{{ event.ticket_price + " $" }}</span
+              >
+
+              <span *ngIf="event.ticket_price_after_discount"
+                >&nbsp; - &nbsp;{{
+                  event.ticket_price_after_discount + " $"
+                }}</span
+              >
             </div>
           </div>
 
           <h1 class="text-xl font-bold text-white mt-8">
-            Drinks night with joy !
+            {{ event.title }}
           </h1>
           <div class="flex gap-4 text-sm">
             <div class="flex gap-2 items-center text-accent">
@@ -55,7 +65,9 @@
                   d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
                 />
               </svg>
-              <span class="text-white">05 dec 2019</span>
+              <span class="text-white">{{
+                toDate(event.start_at) | date : "MMM d, y"
+              }}</span>
             </div>
             <div class="flex gap-2 items-center text-accent">
               <svg
@@ -73,7 +85,10 @@
                 />
               </svg>
 
-              <span class="text-white">10AM - 01PM</span>
+              <span class="text-white"
+                >{{ toDate(event.start_at) | date : "shortTime" }} -
+                {{ toDate(event.end_at) | date : "mediumDate" }}</span
+              >
             </div>
             <div class="flex gap-2 items-center text-accent">
               <svg
@@ -91,15 +106,13 @@
                 />
               </svg>
 
-              <span class="text-white">50</span>
+              <span class="text-white">{{ event.ticket_price }}</span>
             </div>
           </div>
-          <p class="text-gray-200 text-sm">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt,
-            magni? Iste accusantium quis corporis corrupti sit harum incidunt,
-            rem voluptatum!
-          </p>
-          <app-button content="Book ticket"></app-button>
+          <p class="text-gray-200 text-sm">{{ event.description }}</p>
+          <a [href]="event.ticket_payment_url">
+            <app-button content="Book ticket"></app-button>
+          </a>
         </div>
       </ng-template>
     </p-carousel>
