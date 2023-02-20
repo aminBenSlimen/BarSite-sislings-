@@ -24,6 +24,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {CarouselModule} from 'primeng/carousel';
 import {CalendarModule} from 'primeng/calendar';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import {ToastModule} from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,13 +50,15 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     CarouselModule,
     BrowserAnimationsModule,
     CalendarModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastModule
   ],
-  providers: [HttpClient],
+  providers: [HttpClient,MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -13,7 +13,13 @@ export class HttpService {
     this.http
       .get(this.BACK_END_URL + 'landing-page-data')
       .subscribe((data: any) => {
-        this.globalData = data.data        
+        this.globalData = data.data;
       });
+  }
+  contact(data) {
+    return this.http.post(this.BACK_END_URL + 'contacts', data);
+  }
+  makeReservation(data){
+    return this.http.post(this.BACK_END_URL + 'make-reservation', data);
   }
 }
