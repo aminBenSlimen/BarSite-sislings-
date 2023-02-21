@@ -8,7 +8,7 @@
   ></app-sections-headers>
 
   <div
-    class="flex flex-col md:flex-row gap-8 pt-16 max-w-6xl w-full p-4 md:p-0"
+    class="flex flex-col md:flex-row gap-8 pt-16 max-w-6xl w-full "
   >
     <p-carousel
       [value]="events"
@@ -109,7 +109,7 @@
               <span class="text-white">{{ event.ticket_price }}</span>
             </div>
           </div>
-          <p class="text-gray-200 text-sm">{{ event.description }}</p>
+          <p class="text-gray-200 text-sm h-14">{{ event.description }}</p>
           <a [href]="event.ticket_payment_url">
             <app-button content="Book ticket"></app-button>
           </a>

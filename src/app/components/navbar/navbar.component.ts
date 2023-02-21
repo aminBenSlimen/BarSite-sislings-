@@ -14,9 +14,9 @@ export class NavbarComponent {
   mobileNavopen = false;
   path = '/';
   paths = [
+    'About Us',
     'Promos',
     'Upcoming events',
-    'About Us',
     'Additional Services',
     'Gallery',
     'The Menu',

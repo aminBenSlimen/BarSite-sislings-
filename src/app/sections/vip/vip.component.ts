@@ -7,8 +7,9 @@ import { HttpService } from 'src/app/services/http/http.service';
   styleUrls: ['./vip.component.scss'],
 })
 export class VipComponent implements OnInit {
-  promos: any = [];
+  promos: Array<any> = [];
   responsiveOptions;
+  width: any = 0;
   constructor(private http: HttpService) {
     this.responsiveOptions = [
       {
@@ -31,5 +32,8 @@ export class VipComponent implements OnInit {
 
   ngOnInit() {
     this.promos = this.http.globalData.promos;
+    this.width = innerWidth || 0;
+    if (this.width <= 782)
+      this.promos = this.promos.filter((v) => v.use_custom_content);
   }
 }

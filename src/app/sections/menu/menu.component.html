@@ -1,28 +1,41 @@
 <div
+  *ngIf="menu"
   class="h-full flex flex-col gap-4 items-center justify-center bg-black text-white pb-24"
 >
   <app-sections-headers [title]="menu.title"></app-sections-headers>
 
-  <div class="flex flex-col md:flex-row gap-8 pt-16 max-w-6xl w-full p-4 md:p-0">
+  <div
+    class="flex flex-col md:flex-row gap-8 pt-16 max-w-6xl w-full p-4 md:p-0"
+  >
     <div class="flex flex-col gap-12 w-full">
       <div class="flex gap-6 items-center" *ngFor="let m of menuTable1">
         <img [src]="m.image_url" class="w-20 h-20" alt="" />
         <div class="flex gap-6 w-full">
-          <div class=" w-full">
+          <div class="w-full">
             <div class="flex gap-2 items-center">
-              <span class="font-bold whitespace-nowrap">{{m.title}}</span>
+              <span class="font-bold whitespace-nowrap">{{ m.title }}</span>
               <hr class="w-full" />
             </div>
-            <p class="text-xs mt-4">{{m.description}}
-            </p>
+            <p class="text-xs mt-4">{{ m.description }}</p>
           </div>
           <div>
-            <div class="text-accent p-1 text-sm font-bold " [class]="m.price_after_discount && 'line-through decoration-white'">${{m.price}}</div>
-            <div class="bg-accent text-white p-1 text-sm font-bold" *ngIf="m.price_after_discount">${{m.price_after_discount}}</div>
+            <div
+              class="text-accent p-1 text-sm font-bold"
+              [class]="
+                m.price_after_discount && 'line-through decoration-white'
+              "
+            >
+              ${{ m.price }}
+            </div>
+            <div
+              class="bg-accent text-white p-1 text-sm font-bold"
+              *ngIf="m.price_after_discount"
+            >
+              ${{ m.price_after_discount }}
+            </div>
           </div>
         </div>
       </div>
-    
     </div>
     <div class="border-l hidden md:block"></div>
     <div class="border-b md:hidden"></div>
@@ -31,17 +44,28 @@
       <div class="flex gap-6 items-center" *ngFor="let m of menuTable2">
         <img [src]="m.image_url" class="w-20 h-20" alt="" />
         <div class="flex gap-6 w-full">
-          <div class=" w-full">
+          <div class="w-full">
             <div class="flex gap-2 items-center">
-              <span class="font-bold whitespace-nowrap">{{m.title}}</span>
+              <span class="font-bold whitespace-nowrap">{{ m.title }}</span>
               <hr class="w-full" />
             </div>
-            <p class="text-xs mt-4">{{m.description}}
-            </p>
+            <p class="text-xs mt-4">{{ m.description }}</p>
           </div>
           <div>
-            <div class="text-accent p-1 text-sm font-bold " [class]="m.price_after_discount && 'line-through decoration-white'">${{m.price}}</div>
-            <div class="bg-accent text-white p-1 text-sm font-bold" *ngIf="m.price_after_discount">${{m.price_after_discount}}</div>
+            <div
+              class="text-accent p-1 text-sm font-bold"
+              [class]="
+                m.price_after_discount && 'line-through decoration-white'
+              "
+            >
+              ${{ m.price }}
+            </div>
+            <div
+              class="bg-accent text-white p-1 text-sm font-bold"
+              *ngIf="m.price_after_discount"
+            >
+              ${{ m.price_after_discount }}
+            </div>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import gsap from 'gsap';
 import { HttpService } from './services/http/http.service';
 @Component({
@@ -7,17 +8,35 @@ import { HttpService } from './services/http/http.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements AfterViewInit {
-  title = 'barSite';
   bigBall;
   smallBall;
   innerWidth;
   hoverables;
-  constructor(public http:HttpService){
-    http.getAllData()
+  constructor(
+    public http: HttpService,
+    private meta: Meta,
+    private title: Title
+  ) {
+    http.getAllData();
+
+    this.meta.addTags([
+      {
+        name: 'description',
+        content:
+          "Welcome to our bar lounge, located in the heart of the vibrant nightlife scene in the Netherlands. As a cocktail bar and wine bar, we specialize in crafting the perfect drink for any occasion, whether it's a happy hour with friends or a romantic evening for two. Our extensive selection of craft beer and local beer is sure to impress any beer connoisseur, while our delicious bar snacks will satisfy any craving. With live music and a DJ playing the latest hits, our dance floor is the perfect spot to let loose and enjoy a night out. For a more intimate experience, our lounge area offers comfortable seating and a relaxed ambiance, while our outdoor seating and rooftop bar provide stunning views of the city. Whether you're planning a party, corporate event, or private gathering, we are the perfect party venue to make your event unforgettable. Come experience the best cocktails in the Netherlands at our trendy and romantic bar.",
+      },
+      { name: 'author', content: 'Cokitana' },
+      {
+        name: 'keywords',
+        content:
+          'Bar lounge, Nightlife in the Netherlands, Cocktail bar, Wine bar, Happy hour, Bar snacks, Craft beer, Live music, DJ, Dance floor, Lounge area, Outdoor seating, Rooftop bar, Best cocktails in the Netherlands, Local beer, Party venue, Private events, Corporate events, Romantic bar, Trendy bar',
+      },
+    ]);
+    this.title.setTitle('Sislings');
   }
   ngAfterViewInit() {
     this.innerWidth = window.innerWidth;
-    
+
     document.body.addEventListener('mousemove', this.onMouseMove);
     this.bigBall = document.querySelector('.cursor__ball--big');
 
