@@ -12,6 +12,8 @@ export class GalleryComponent {
 
   ngOnInit() {
     this.events = this.http.globalData.galleries;
+
+    document.oncontextmenu = () => false;
   }
   toDate(date) {
     return new Date(date);

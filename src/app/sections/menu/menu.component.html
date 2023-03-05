@@ -14,7 +14,7 @@
           <div class="w-full">
             <div class="flex gap-2 items-center">
               <span class="font-bold whitespace-nowrap">{{ m.title }}</span>
-              <hr class="w-full" />
+              <hr class="w-full hidden md:block" />
             </div>
             <p class="text-xs mt-4">{{ m.description }}</p>
           </div>
@@ -47,7 +47,7 @@
           <div class="w-full">
             <div class="flex gap-2 items-center">
               <span class="font-bold whitespace-nowrap">{{ m.title }}</span>
-              <hr class="w-full" />
+              <hr class="w-full hidden md:block" />
             </div>
             <p class="text-xs mt-4">{{ m.description }}</p>
           </div>
@@ -71,5 +71,7 @@
       </div>
     </div>
   </div>
-  <app-button content="See all Menu" type="center" class="mt-8"></app-button>
+  <a routerLink="/all-menu">
+    <app-button content="See all Menu" type="center" class="mt-8"></app-button>
+  </a>
 </div>

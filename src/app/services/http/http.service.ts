@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class HttpService {
   BACK_END_URL = 'https://sislingsadmin.cokitana-erp.online/api/';
   globalData: any;
+  allData: any = {};
   constructor(private http: HttpClient) {}
 
   getAllData() {
@@ -19,7 +20,18 @@ export class HttpService {
   contact(data) {
     return this.http.post(this.BACK_END_URL + 'contacts', data);
   }
-  makeReservation(data){
+  makeReservation(data) {
     return this.http.post(this.BACK_END_URL + 'make-reservation', data);
+  }
+  async fetchAll(dataPoint, path) {
+    return new Promise<void>((resolve, reject) => {
+      this.http.get(this.BACK_END_URL + path).subscribe(
+        (data: any) => {
+          this.allData[dataPoint] = data.data;
+          resolve();
+        },
+        (err) => reject()
+      );
+    });
   }
 }

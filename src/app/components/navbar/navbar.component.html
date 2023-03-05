@@ -1,12 +1,15 @@
-<div class=" fixed w-screen z-30 duration-500">
-
-  <nav
-    class="w-full text-gray-700 bg-black border-b border-accent "
-  >
+<div class="fixed w-screen z-30 duration-500">
+  <nav class="w-full text-gray-700 bg-black border-b border-accent">
     <div
       class="flex flex-col px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
     >
-      <img src="assets/images/cocktail.png" class="absolute h-14 md:top-0 top-3" alt="">
+      <a href="/"
+       class="absolute h-14 md:top-auto top-3"
+        ><img
+          src="assets/images/cocktail.png"
+          class="h-full"
+          alt=""
+      /></a>
       <div class="py-7 h-20"></div>
       <div
         class="flex absolute flex-row items-center md:justify-between px-4 py-2 w-full left-0 md:left-auto h-20 justify-end"
@@ -36,15 +39,12 @@
         class="flex-grow pb-4 justify-center md:pb-0 md:justify-center md:flex-row flex-col items-center w-full z-10"
       >
         <a
-        *ngFor="let p of paths"
-          [class]="
-            path === p ? 'text-accent' : 'text-white '
-          "
+          *ngFor="let p of paths"
+          [class]="path === p ? 'text-accent' : 'text-white '"
           (click)="changePath(p)"
           class="px-4 cursor-pointer hoverable py-2 mt-2 text-sm duration-150 font-semibold rounded-lg md:mt-0 md:ml-4 focus:outline-none focus:shadow-outline"
-          >{{p}}</a
+          >{{ p }}</a
         >
-       
       </nav>
     </div>
   </nav>

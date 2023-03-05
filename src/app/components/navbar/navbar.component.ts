@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
+  constructor(private router: Router) {}
   showMenu = false;
   scrollingTop = false;
   open = false;
@@ -28,7 +30,7 @@ export class NavbarComponent {
 
   onScroll(event: any) {
     const verticalOffset =
-      window.pageYOffset || 
+      window.pageYOffset ||
       document.documentElement.scrollTop ||
       document.body.scrollTop ||
       0;
@@ -42,6 +44,14 @@ export class NavbarComponent {
 
   changePath(p: any) {
     this.path = p;
-    document.getElementById(p)?.scrollIntoView({behavior:'smooth',block:'center'})
+    const scroll = () =>
+      document
+        .getElementById(p)
+        ?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (location.pathname !== '/') {
+      this.router.navigate(['/']).then(() => {
+        scroll();
+      });
+    } else scroll();
   }
 }

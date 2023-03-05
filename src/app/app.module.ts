@@ -27,6 +27,13 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import {ToastModule} from 'primeng/toast';
 import { MessageService } from 'primeng/api';
+import { AllEventsComponent } from './pages/all-events/all-events.component';
+import { AllMenuComponent } from './pages/all-menu/all-menu.component';
+import { AllGalleryComponent } from './pages/all-gallery/all-gallery.component';
+import { AllSignaturesComponent } from './pages/all-signatures/all-signatures.component';
+import { AllPromosComponent } from './pages/all-promos/all-promos.component';
+import { AllServicesComponent } from './pages/all-services/all-services.component';
+import { IndexComponent } from './pages/index/index.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +53,14 @@ import { MessageService } from 'primeng/api';
     FooterComponent,
     InputComponent,
     AdditionalserviceComponent,
-    DjsectionComponent
+    DjsectionComponent,
+    AllEventsComponent,
+    AllMenuComponent,
+    AllGalleryComponent,
+    AllSignaturesComponent,
+    AllPromosComponent,
+    AllServicesComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,

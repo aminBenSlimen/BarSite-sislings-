@@ -3,6 +3,8 @@
   class="w-full h-96 object-cover object-bottom"
   alt=""
 />
+
+
 <div class="flex p-4 md:p-16 justify-center bg-black">
   <div
     class="flex flex-col md:flex-row gap-80 md:gap-8 w-full max-w-6xl items-center"
@@ -14,14 +16,15 @@
       <h1 class="text-white text-6xl font-[RalewayBold]">Our Cocktails</h1>
 
       <p class="text-gray-100 text-md my-8">
-       {{selectedCoktail.description}}
+        {{ selectedCoktail.description }}
       </p>
 
-      <app-button type="left" content="Explore Our Menu"></app-button>
+      <a routerLink="/all-signatures">
+        <app-button type="left" content="Explore Our Menu"></app-button>
+      </a>
     </div>
 
     <div class="flex flex-col items-center gap-4 md:w-1/2">
-
       <!-- <div class="flex gap-4 justify-center text-white items-center -mt-72 flex-col">
         <img [src]="'https://sislingsadmin.cokitana-erp.online/storage/cocktails/pWxA9AEci8Y90FMPDo8uojAELZroLb1jHTS3N8YR.png'" class="w-3/4" alt="" />
       </div> -->
@@ -36,13 +39,15 @@
         [autoplayInterval]="3000"
         [responsiveOptions]="responsiveOptions"
         [indicatorsContentStyle]="{ margin: '0.5em 0' }"
-        [style]="{'margin-top': '-288px'}"
+        [style]="{ 'margin-top': '-288px' }"
       >
         <ng-template let-coktail pTemplate="item">
-          <div class="flex gap-4 justify-center text-white items-center flex-col">
-            <img [src]="coktail.image_url"  alt="" />
+          <div
+            class="flex gap-4 justify-center text-white items-center flex-col"
+          >
+            <img [src]="coktail.image_url" alt="" />
             <h3 class="text-white uppercase text-2xl font-[RalewayExtraBold]">
-              {{coktail.name}}
+              {{ coktail.name }}
             </h3>
           </div>
         </ng-template>

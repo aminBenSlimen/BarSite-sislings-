@@ -1,6 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import gsap from 'gsap';
+import { Carousel } from 'primeng/carousel';
 import { HttpService } from './services/http/http.service';
 @Component({
   selector: 'app-root',
@@ -13,12 +14,13 @@ export class AppComponent implements AfterViewInit {
   innerWidth;
   hoverables;
   constructor(
-    public http: HttpService,
     private meta: Meta,
-    private title: Title
+    private title: Title,
+    public http: HttpService
   ) {
     http.getAllData();
-
+    
+    Carousel.prototype.onTouchMove = (): void => undefined;
     this.meta.addTags([
       {
         name: 'description',

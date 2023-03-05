@@ -1,0 +1,32 @@
+<main class="pt-20 bg-black">
+  <img
+    src="assets/images/cocktailsSegnature.jpg"
+    class="w-full h-96 object-cover object-bottom"
+    alt=""
+  />
+  <div class="flex p-4 md:p-16 justify-center bg-black">
+    <div
+      class="flex flex-col md:flex-row gap-80 md:gap-8 w-full max-w-6xl items-center"
+    >
+      <div class="flex flex-wrap gap-8 pt-16 justify-center max-w-6xl w-full">
+        <div *ngFor="let event of allGallery" class="relative img">
+          <div
+            class="absolute text-white bg-accent bg-opacity-90 flex flex-col justify-center items-center gap-4 w-full h-full opacity-0 hover:opacity-100 cursor-pointer duration-500"
+          >
+            <span class="text-md">{{ event.sub_title }}</span>
+            <span class="text-2xl font-[RalewayBold]">{{ event.title }}</span>
+            <hr class="w-16" />
+            <span class="text-sm font-[RalewayBold]">{{
+              event.date && toDate(event.date) | date : "mediumDate"
+            }}</span>
+          </div>
+          <img
+            [src]="event.image_url || 'assets/images/dj1.jpg'"
+            class="w-full h-full object-cover"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

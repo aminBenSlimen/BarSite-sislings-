@@ -1,0 +1,33 @@
+<main class="pt-20 bg-black">
+  <img
+    src="assets/images/cocktailsSegnature.jpg"
+    class="w-full h-96 object-cover object-bottom mb-24"
+    alt=""
+  />
+
+  <app-sections-headers
+    [title]="'All Out Signature coktails'"
+    [description]="'Sip, savor, and indulge in our cocktail creations.'"
+  ></app-sections-headers>
+
+  <div class="flex p-4 md:p-16 justify-center bg-black">
+    <div
+      class="flex flex-wrap gap-y-32 gap-x-8 pt-16 justify-center max-w-6xl w-full relative"
+    >
+      <div
+        *ngFor="let event of allSignature"
+        class="flex flex-col items-center w-1/4"
+      >
+        <img [src]="event.image_url" class="h-full object-cover w-1/2" alt="" />
+        <div class="text-white w-full text-center text-xl font-bold mt-4">
+          {{ event.name }}
+        </div>
+        <div
+          class="text-gray-400 text-center text-xs font-bold mt-4 w-10/12 h-16"
+        >
+          {{ event.description }}
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

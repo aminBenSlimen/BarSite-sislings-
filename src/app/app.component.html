@@ -1,20 +1,10 @@
 <app-navbar></app-navbar>
-<app-welcome></app-welcome>
-<ng-container *ngIf="http.globalData">
-  <app-aboutus id="About Us"></app-aboutus>
-  <app-vip id="Promos"></app-vip>
-  <app-upcomingevents id="Upcoming events"></app-upcomingevents>
-  <app-additionalservice id="Additional Services"></app-additionalservice>
-  <app-gallery id="Gallery"></app-gallery>
-  <app-menu id="The Menu"></app-menu>
-  <app-signature id="Our Cocktails"></app-signature>
-  <app-booking id="Booking"></app-booking>
-</ng-container>
-<!-- <app-djsection id="Dj Section"></app-djsection> -->
-<app-contactus id="Contact Us"></app-contactus>
 
-<app-footer></app-footer>
 <router-outlet></router-outlet>
+
+<ng-container *ngIf="http.globalData">
+  <app-footer></app-footer>
+</ng-container>
 
 <div *ngIf="innerWidth >= 768" class="cursor">
   <div class="cursor__ball cursor__ball--big">

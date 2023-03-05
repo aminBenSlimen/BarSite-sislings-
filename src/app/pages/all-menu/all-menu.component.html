@@ -1,0 +1,79 @@
+<main class="pt-20 bg-black">
+  <img
+    src="assets/images/cocktailsSegnature.jpg"
+    class="w-full h-96 object-cover object-bottom"
+    alt=""
+  />
+  <div class="flex p-4 md:p-16 justify-center bg-black">
+    <div
+      class="flex flex-col md:flex-row gap-8 pt-16 max-w-6xl w-full p-4 md:p-0"
+    >
+    <div *ngIf="!allMenu || allMenu.length == 0">
+      <span>No active menu</span>
+    </div>
+      <div class="flex flex-col gap-12 w-full">
+        <div class="flex gap-6 items-center" *ngFor="let m of menuTable1">
+          <img [src]="m.image_url" class="w-20 h-20" alt="" />
+          <div class="flex gap-6 w-full">
+            <div class="w-full">
+              <div class="flex gap-2 items-center">
+                <span class="font-bold whitespace-nowrap">{{ m.title }}</span>
+                <hr class="w-full hidden md:block" />
+              </div>
+              <p class="text-xs mt-4">{{ m.description }}</p>
+            </div>
+            <div>
+              <div
+                class="text-accent p-1 text-sm font-bold"
+                [class]="
+                  m.price_after_discount && 'line-through decoration-white'
+                "
+              >
+                ${{ m.price }}
+              </div>
+              <div
+                class="bg-accent text-white p-1 text-sm font-bold"
+                *ngIf="m.price_after_discount"
+              >
+                ${{ m.price_after_discount }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-l hidden md:block"></div>
+      <div class="border-b md:hidden"></div>
+
+      <div class="flex flex-col gap-12 w-full">
+        <div class="flex gap-6 items-center" *ngFor="let m of menuTable2">
+          <img [src]="m.image_url" class="w-20 h-20" alt="" />
+          <div class="flex gap-6 w-full">
+            <div class="w-full">
+              <div class="flex gap-2 items-center">
+                <span class="font-bold whitespace-nowrap">{{ m.title }}</span>
+                <hr class="w-full hidden md:block" />
+              </div>
+              <p class="text-xs mt-4">{{ m.description }}</p>
+            </div>
+            <div>
+              <div
+                class="text-accent p-1 text-sm font-bold"
+                [class]="
+                  m.price_after_discount && 'line-through decoration-white'
+                "
+              >
+                ${{ m.price }}
+              </div>
+              <div
+                class="bg-accent text-white p-1 text-sm font-bold"
+                *ngIf="m.price_after_discount"
+              >
+                ${{ m.price_after_discount }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
